@@ -7,7 +7,6 @@
 *.pdf
 *.png
 *.h5ad
-*.txt
 *.csv
 
 # Byte-compiled / optimized files
