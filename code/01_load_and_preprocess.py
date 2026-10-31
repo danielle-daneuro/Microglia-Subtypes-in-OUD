@@ -97,6 +97,10 @@ pdata.layers["CP10k_counts"] = pdata.X
 sc.pp.normalize_total(pdata, target_sum=1e4, layer='CP10k_counts')
 sc.pp.log1p(pdata, layer='CP10k_counts')
 
+#Delete raw slot
+del cdata.raw
+del pdata.raw
+
 #Filter pdata by mt pct
 pdata = pdata[pdata.obs['pct_counts_mt'] < 10]
 
